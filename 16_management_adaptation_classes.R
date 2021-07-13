@@ -93,7 +93,7 @@ ggplot(data=b, aes(x=gain.p, y=loss.p))+  # non park-filtered
   ylab('Proportion of extirpations')+
   scale_fill_manual(name="Park trends",
                     breaks=c('High turnover', 'High potential extirpation', 'High potential colonization', 'Intermediate change', 'Low change'),
-                    values=c('#6dbeeb', '#ffffff', '#fc6c49', '#8fd33f', '#fee749'),
+                    values=c('#fc6c49', '#ffffff', '#6dbeeb', '#8fd33f', '#fee749'),
                     guide="none")+
   geom_segment(aes(x=median(b$gain.p), xend=median(b$gain.p), y=0, yend=quantile(b$loss.p)[2]), colour = "white", size = 1, linetype=1)+
   geom_segment(aes(x=median(b$gain.p), xend=median(b$gain.p), y=quantile(b$loss.p)[4], yend=Inf), colour = "white", size = 1, linetype=1)+
