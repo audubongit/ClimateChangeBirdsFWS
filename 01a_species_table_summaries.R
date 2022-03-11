@@ -9,6 +9,8 @@ library(plyr)
 library(tidyverse)
 library(ff)
 
+## PLEASE NOTE: CLIMATE DATA CAN BE DOWNLOADED HERE: https://adaptwest.databasin.org/pages/audubon-survival-by-degrees/
+
 # output directory
 out_dir <- 'Z:/Climate_2_0/Climate_USFWS_Briefs/outputs/mode_outputs/'
 
@@ -21,7 +23,7 @@ spp <- NA # spp <- 'ATSP' # test
 spp_group <- NA #'urban_suburban' # subset by group or use NA
 
 github_path <- '~/github/climate2/climate20_fxns_domino/'
-data_path <- 'Z:/Climate_2_0/ss_model_outputs_groups/'
+data_path <- 'Z:/Climate_2_0/ss_model_outputs_groups/' # This is the file structure we set up that contained each species by habitat association groups. You may need to modify the way rasters are read.
 
 # species lists from phenology tables
 spp_summer <- dir(github_path, pattern='summer.csv', full.names=TRUE)
